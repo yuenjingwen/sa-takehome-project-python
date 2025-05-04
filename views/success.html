@@ -1,0 +1,20 @@
+{% extends 'layouts/main.html' %}
+
+{% block content %}
+<main>
+  <div class="mt-40 text-center text-success">
+    <h1>
+      <i class="far fa-check-circle"></i> 
+      Success!
+    </h1>
+  </div>
+  <div class="mt-40 text-center">
+    <div id=payment-details class="mt-20 text-center text-secondary border-placeholder">
+      <div id="payment-status"></div>
+      Payment Details:
+      <p>Payment ID: <span class="payment-id">{{ payment_intent_id }}</span></p>
+      <p>Amount Paid: $<span class="amount" data-amount="{{ amount }}"></span></p>
+    </div>
+  </div>
+</main>
+{% endblock %}
